@@ -1,8 +1,7 @@
 import { HelmetProvider } from "react-helmet-async";
-import "@/styles/style.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { RouterProvider } from "react-router-dom";
-import router from "@/routes/index";
+import router from "./routes/index";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const queryClient = new QueryClient({

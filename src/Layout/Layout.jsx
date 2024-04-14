@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { Provider } from "jotai";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import ScrollToTop from "@/Components/ScrollToTop";
+import ScrollToTop from "@/components/ScrollToTop";
+import Header from "@/components/organisms/Header";
 
 function Layout() {
   const queryClient = new QueryClient();
@@ -10,7 +11,7 @@ function Layout() {
     <QueryClientProvider client={queryClient}>
       <Provider>
         <div className="w-full h-full">
-          {/* <Header /> */}
+          <Header />
           <ScrollToTop />
           <main>
             <Outlet />

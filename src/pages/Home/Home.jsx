@@ -1,4 +1,5 @@
 import ImageSlider from "./ImageSlider";
+import NewProductSwiper from "./NewProductSwiper";
 
 function Home() {
   return (
@@ -6,7 +7,9 @@ function Home() {
       <article>
         <ImageSlider />
       </article>
-      <article>asdfasdf asdfasdfasdf asdfasdf</article>
+      <article className="w-[1440px] h-[50vh] m-auto">
+        <NewProductSwiper />
+      </article>
     </section>
   );
 }

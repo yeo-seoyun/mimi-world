@@ -31,3 +31,19 @@
     url(../assets/fonts/woff2/Pretendard-Regular.woff2) format('woff2'),
     url(../assets/fonts/woff/Pretendard-Regular.woff) format('woff');
 }
+
+@font-face {
+  font-family: '1973MimiWorld';
+  src: url('/fonts/1973MimiWorldR.woff') format('woff'),
+       url('/fonts/1973MimiWorldR.woff2') format('woff2'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '1973MimiWorld';
+  src: url('/fonts/1973MimiWorldB.woff') format('woff'),
+       url('/fonts/1973MimiWorldB.woff2') format('woff2'); 
+  font-weight: bold;
+  font-style: normal;
+}

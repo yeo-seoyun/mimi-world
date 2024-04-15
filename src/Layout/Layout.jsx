@@ -14,7 +14,7 @@ function Layout() {
         <div className="w-full h-full">
           <Header />
           <ScrollToTop />
-          <main className="px-12">
+          <main>
             <Outlet />
           </main>
           <Footer />

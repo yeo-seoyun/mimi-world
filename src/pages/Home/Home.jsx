@@ -1,8 +1,12 @@
+import ImageSlider from "./ImageSlider";
+
 function Home() {
   return (
     <div className="bg-pink-200">
       <section>
-        <article></article>
+        <article>
+          <ImageSlider />
+        </article>
       </section>
     </div>
   );

@@ -2,7 +2,7 @@ import ImageSlider from "./ImageSlider";
 
 function Home() {
   return (
-    <section>
+    <section className="py-16">
       <article>
         <ImageSlider />
       </article>

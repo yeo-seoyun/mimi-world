@@ -2,13 +2,12 @@ import ImageSlider from "./ImageSlider";
 
 function Home() {
   return (
-    <div className="bg-pink-200">
-      <section>
-        <article>
-          <ImageSlider />
-        </article>
-      </section>
-    </div>
+    <section>
+      <article>
+        <ImageSlider />
+      </article>
+      <article>asdfasdf asdfasdfasdf asdfasdf</article>
+    </section>
   );
 }
 

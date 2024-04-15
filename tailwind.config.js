@@ -17,7 +17,7 @@ export default {
         },
       },
       fontFamily: {
-        mimi: ["1973MimiWorld", "sans-serif"],
+        mimi: ['"1973MimiWorld"', "sans-serif"],
       },
       backgroundImage: {
         "mimi-logo": "url('src/assets/components/logo.png')",

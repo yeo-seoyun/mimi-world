@@ -31,8 +31,7 @@ function Header() {
               <li>미미프렌즈</li>
               <li>미미펫샵</li>
               <li>쫑알쫑알 똘똘이</li>
-              <li>월드카</li>
-              <li>월드게임</li>
+              <li>글로벌완구</li>
             </ul>
           </div>
 

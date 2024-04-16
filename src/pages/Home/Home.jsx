@@ -1,6 +1,7 @@
 import AgeLine from "./AgeLine";
 import ImageSlider from "./ImageSlider";
 import NewProductSwiper from "./NewProductSwiper";
+import SnsLink from "./SnsLink";
 import Youtube from "./Youtube";
 
 function Home() {
@@ -9,10 +10,11 @@ function Home() {
       <article>
         <ImageSlider />
       </article>
-      <article className="w-[1440px] m-auto flex flex-col gap-14">
+      <article className="w-[90%] m-auto flex flex-col gap-14">
         <NewProductSwiper />
         <AgeLine />
         <Youtube />
+        <SnsLink />
       </article>
     </section>
   );

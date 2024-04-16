@@ -5,9 +5,7 @@ import "swiper/css/navigation";
 import pb from "../../api/pocketbase";
 import ProductCard from "../../components/molecule/ProductCard";
 import MoreButton from "../../components/atom/MoreButton";
-
-// import SwiperCore, { Navigation } from "swiper";
-// SwiperCore.use([Navigation]);
+import { Navigation } from "swiper/modules";
 
 function NewProductSwiper() {
   const [product, setProduct] = useState([]);
@@ -36,10 +34,11 @@ function NewProductSwiper() {
         <MoreButton>자세히 보기</MoreButton>
       </div>
       <Swiper
-        className="w-full px-16"
-        spaceBetween={12}
-        slidesPerView={4}
+        className="w-full"
+        spaceBetween={10}
+        slidesPerView={2}
         navigation
+        modules={[Navigation]}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         breakpoints={{

@@ -7,15 +7,27 @@ function Header() {
         <nav className="w-full h-full flex items-center gap-3">
           <div className="group inline-block h-full">
             <Link
-              to=""
+              to="/mimiworld"
               className="relative h-full flex items-center justify-center"
             >
               미미월드
             </Link>
             <ul className="absolute left-0 w-full py-4 px-12 hidden group-hover:block z-50 bg-white text-sm space-y-3">
-              <li>회사소개</li>
-              <li>CEO인사말</li>
-              <li>인재채용</li>
+              <li>
+                <Link to="/mimiworld" aria-label="회사소개">
+                  회사소개
+                </Link>
+              </li>
+              <li>
+                <Link to="/mimiworld/ceomessage" aria-label="ceo인사말">
+                  CEO인사말
+                </Link>
+              </li>
+              <li>
+                <Link to="/mimiworld/careers" aria-label="인재채용">
+                  인재채용
+                </Link>
+              </li>
             </ul>
           </div>
 

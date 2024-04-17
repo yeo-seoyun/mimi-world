@@ -4,6 +4,7 @@ import Careers from "../pages/Mimiworld/Careers";
 import CeoMessage from "../pages/Mimiworld/CeoMessage";
 import Mimiworld from "../pages/Mimiworld/Mimiworld";
 import AboutUs from "../pages/Mimiworld/AboutUs";
+import Brand from "../pages/Brand/Brand";
 
 const navigationItems = [
   {
@@ -21,6 +22,15 @@ const navigationItems = [
       { index: true, element: <AboutUs /> }, // '/mimiworld'의 기본 페이지
       { path: "ceomessage", element: <CeoMessage /> },
       { path: "careers", element: <Careers /> },
+    ],
+  },
+  {
+    path: "/brand",
+    element: <Brand />,
+    children: [
+      // { index: true, element: <AboutUs /> },
+      // { path: "ceomessage", element: <CeoMessage /> },
+      // { path: "careers", element: <Careers /> },
     ],
   },
 ];

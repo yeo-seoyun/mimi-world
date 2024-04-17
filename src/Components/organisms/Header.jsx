@@ -33,7 +33,7 @@ function Header() {
 
           <div className="group inline-block h-full">
             <Link
-              to=""
+              to="/brand"
               className="relative h-full flex items-center justify-center"
             >
               브랜드

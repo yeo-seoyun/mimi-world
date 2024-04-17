@@ -5,7 +5,7 @@ const DetailButton = ({ to, label, className, children }) => {
     <Link
       to={to}
       aria-label={label}
-      className={`bg-pink-100 rounded-full text-white py-1 px-2 transition duration-300 hover:bg-pink-200 ${className}`}
+      className={`bg-pink-100 rounded-full text-white py-1 px-2 transition duration-300 hover:bg-pink-200 font-mimi ${className}`}
     >
       {children}
     </Link>

@@ -47,3 +47,9 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@layer base {
+  body {
+    @apply text-black-100;
+  }
+}

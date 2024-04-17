@@ -28,10 +28,10 @@ function NewProductSwiper() {
 
   return (
     <div className="w-full h-full flex flex-col gap-8">
-      <div className="flex flex-col gap-2 m-auto items-center font-mimi">
-        <h2 className="text-2xl">영원한 나의 친구!</h2>
+      <div className="flex flex-col gap-2 m-auto items-center">
+        <h2 className="font-mimi text-2xl">영원한 나의 친구!</h2>
         <p>미미월드 프랜즈 만나보기</p>
-        <DetailButton>자세히 보기</DetailButton>
+        <DetailButton to="/product">자세히 보기</DetailButton>
       </div>
       <Swiper
         className="w-full"

@@ -1,4 +1,3 @@
-// import { lazy } from "react";
 import Home from "../pages/Home/Home";
 import Careers from "../pages/Mimiworld/Careers";
 import CeoMessage from "../pages/Mimiworld/CeoMessage";

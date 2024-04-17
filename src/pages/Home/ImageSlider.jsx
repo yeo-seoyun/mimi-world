@@ -17,7 +17,7 @@ const ImageSlider = () => {
   }, [count]);
 
   return (
-    <div className="relative font-mimi lg:h-[70vh] md:h-[30vh]">
+    <div className="relative font-mimi lg:h-[80vh] md:h-[30vh]">
       <ul>
         <li
           className={`absolute w-full h-full bg-main-bg1 bg-no-repeat bg-cover transition-opacity bg-slate-400 ${

@@ -7,7 +7,7 @@ import Youtube from "./Youtube";
 
 function Home() {
   return (
-    <section className="w-full h-full py-16 flex flex-col lg:gap-20 md:gap-12">
+    <section className="w-full h-full py-16 flex flex-col lg:gap-24 md:gap-12">
       <article>
         <ImageSlider />
       </article>

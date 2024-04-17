@@ -23,17 +23,16 @@ function AboutUs() {
           귀 기울이는 모범적인 기업으로 나아갈 것을 약속 드립니다.
         </p>
       </article>
-      <article className="flex flex-col gap-5 items-start w-[90%] h-[70vh]">
+      <article className="flex flex-col gap-5 items-start w-[90%] lg:h-[90vh] md:h-[30vh]">
         <SectionTitle title="조직도" />
-
         <div className="w-full h-full">
           <p className="bg-emterprise bg-contain bg-no-repeat bg-center w-full h-full"></p>
         </div>
       </article>
-      <article className="flex flex-col gap-5 items-start w-[90%] h-[70vh]">
+      <article className="flex flex-col gap-5 items-start w-[90%] lg:h-[90vh] md:h-[40vh]">
         <SectionTitle title="기업가치" />
         <div className="w-full h-full">
-          <p className="bg-organization bg-contain bg-no-repeat bg-center w-full h-full"></p>
+          <p className="bg-organization lg:bg-conver md:bg-contain bg-no-repeat bg-center w-full h-full"></p>
         </div>
       </article>
     </section>

@@ -23,9 +23,11 @@ function NoticeSimple() {
   }, []);
 
   return (
-    <div className="w-1/3 bg-slate-50 bg-opacity-40 rounded-md p-4">
+    <div className="flex flex-col gap-6 xl:w-full lg:w-[17.5rem] md:w-[11.563rem] bg-slate-50 bg-opacity-40 rounded-md p-4">
       <div className="flex items-center justify-center gap-3">
-        <h2 className="font-mimi text-2xl text-center">미미 공지사항</h2>
+        <h2 className="font-mimi lg:text-2xl md:text-lg text-center">
+          미미 공지사항
+        </h2>
         <Link to="/notice">
           <span>
             <FontAwesomeIcon icon={faPlus} />
@@ -35,7 +37,9 @@ function NoticeSimple() {
       {notices.length > 0 ? (
         <ul>
           {notices.map((notice) => (
-            <li key={notice.id}>{notice.title}</li>
+            <li key={notice.id} className="lg:text-lg md:text-sm truncate">
+              {notice.title}
+            </li>
           ))}
         </ul>
       ) : (

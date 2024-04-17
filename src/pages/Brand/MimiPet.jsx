@@ -23,17 +23,17 @@ function MimiPet() {
 
   return (
     <>
-      <section className="flex flex-col gap-12 items-center">
+      <section className="flex flex-col lg:gap-12 md:gap-4 items-center">
         <h2 className="font-mimi text-3xl sr-only">미미펫샵</h2>
-        <article className="w-[90%] h-[60vh]">
+        <article className="w-[90%] lg:h-[60vh] md:h-[30vh]">
           <p className="bg-mimi-pet bg-no-repeat bg-contain bg-center w-full h-full"></p>
         </article>
         <article className="w-[90%] py-9">
           <SectionTitle title="브랜드 이야기" />
-          <ul className="w-[70%] h-full flex items-center justify-center gap-16 m-auto">
-            <li className="bg-mimi-pet-logo bg-contain bg-no-repeat bg-center w-[40%] h-40"></li>
+          <ul className="w-[70%] h-full flex lg:flex-row lg:items-center lg:justify-center gap-16 md:flex-col md:items-center m-auto">
+            <li className="bg-mimi-pet-logo bg-contain bg-no-repeat bg-center lg:w-[40%] md:w-[50%] h-40"></li>
             <li>
-              <p className="text-lg flex flex-col gap-3">
+              <p className="lg:text-lg md:text-sm flex flex-col gap-3">
                 <span>미미펫샵은 '미미월드'의 동물완구 브랜드 입니다</span>
                 <span>
                   따라쟁이 앵무, 깡총 아기토끼부터 산책을 좋아하는 공주
@@ -50,7 +50,7 @@ function MimiPet() {
             </li>
           </ul>
         </article>
-        <article className="w-[90%] h-[60vh] py-9">
+        <article className="w-[90%] lg:h-[60vh] md:h-[40vh] py-9">
           <SectionTitle title="캐릭터 소개" />
           <div className="bg-mimi-pet-img bg-contain bg-no-repeat bg-center w-full h-full"></div>
         </article>

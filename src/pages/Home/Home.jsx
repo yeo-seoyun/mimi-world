@@ -7,11 +7,11 @@ import Youtube from "./Youtube";
 
 function Home() {
   return (
-    <section className="py-16 flex flex-col lg:gap-20 md:gap-12">
+    <section className="w-full h-full py-16 flex flex-col lg:gap-20 md:gap-12">
       <article>
         <ImageSlider />
       </article>
-      <article className="w-[90%] m-auto flex flex-col gap-24">
+      <article className="w-[90%] h-full m-auto flex flex-col gap-24">
         <NewProductSwiper />
         <AgeLine />
         <Youtube />

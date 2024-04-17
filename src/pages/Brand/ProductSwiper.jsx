@@ -5,7 +5,7 @@ import SectionTitle from "../../components/atom/SectionTitle";
 
 function ProductSwiper({ products }) {
   return (
-    <article className="w-[90%] h-[60vh] py-9 flex flex-col gap-5">
+    <article className="w-[90%] lg:h-[60vh] md:h-[35vh] py-9 flex flex-col gap-5">
       <SectionTitle title="상품 소개" />
       <Swiper
         className="w-full"

@@ -25,15 +25,15 @@ function Mimifriends() {
     <>
       <section className="flex flex-col gap-12 items-center">
         <h2 className="font-mimi text-3xl sr-only">프린세스 미미</h2>
-        <article className="w-[90%] h-[60vh]">
+        <article className="w-[90%] lg:h-[60vh] md:h-[30vh]">
           <p className="bg-mimi-friends bg-no-repeat bg-contain bg-center w-full h-full"></p>
         </article>
         <article className="w-[90%] h-[40vh] py-9">
           <SectionTitle title="브랜드 이야기" />
-          <ul className="w-[70%] h-full flex items-center justify-center gap-16 m-auto">
+          <ul className="w-[70%] h-full flex lg:flex-row lg:items-center lg:justify-center gap-16 md:flex-col md:items-center m-auto">
             <li className="bg-mimi-friends-logo bg-contain bg-no-repeat bg-center w-[30%] h-40"></li>
             <li>
-              <p className="text-lg flex flex-col gap-3">
+              <p className="lg:text-lg md:text-sm  flex flex-col gap-3">
                 <span>
                   초등학생들의 트렌디한 장난감! 미미프렌즈 오직 초등학생들을
                   위해 만들어졌다!
@@ -52,7 +52,7 @@ function Mimifriends() {
             </li>
           </ul>
         </article>
-        <article className="w-[90%] h-[60vh] py-9">
+        <article className="w-[90%] lg:h-[60vh] md:h-[40vh] py-9">
           <SectionTitle title="캐릭터 소개" />
           <div className="bg-mimi-friends-img bg-contain bg-no-repeat bg-center w-full h-full"></div>
         </article>

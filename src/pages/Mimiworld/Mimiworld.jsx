@@ -4,7 +4,7 @@ import SubNav from "../../components/molecule/SubNav";
 function Mimiworld() {
   return (
     <>
-      <section className="py-16 px-12 flex flex-col">
+      <section className="py-16 px-12 sm:px-2 flex flex-col">
         <h2 className="font-mimi text-4xl text-center py-5">MIMI WORLD</h2>
         <SubNav
           links={[

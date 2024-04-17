@@ -23,15 +23,15 @@ function Mimifriends() {
 
   return (
     <>
-      <section className="flex flex-col lg:gap-24 md:gap-4 items-center">
-        <h2 className="font-mimi text-3xl sr-only">프린세스 미미</h2>
-        <article className="w-[90%] lg:h-[60vh] md:h-[30vh]">
+      <section className="flex flex-col lg:gap-24 md:gap-4 sm:gap-8 items-center">
+        <h2 className="font-mimi text-3xl sr-only">미미프렌즈</h2>
+        <article className="w-[90%] lg:h-[60vh] md:h-[30vh] sm:h-[25vh]">
           <p className="bg-mimi-friends bg-no-repeat bg-contain bg-center w-full h-full"></p>
         </article>
         <article className="w-[90%]">
           <SectionTitle title="브랜드 이야기" />
-          <ul className="w-[70%] h-full flex lg:flex-row lg:items-center lg:justify-center gap-16 md:flex-col md:items-center m-auto">
-            <li className="bg-mimi-friends-logo bg-contain bg-no-repeat bg-center w-[30%] h-40"></li>
+          <ul className="w-[100%] h-full flex lg:flex-row lg:items-center lg:justify-center gap-16 md:flex-col md:items-center sm:flex-col sm:items-center sm:gap-6 m-auto">
+            <li className="bg-mimi-friends-logo bg-contain bg-no-repeat bg-center lg:w-[40%] md:w-[50%] sm:w-[80%] h-40 sm:h-20"></li>
             <li>
               <p className="lg:text-lg md:text-sm  flex flex-col gap-3">
                 <span>
@@ -52,7 +52,7 @@ function Mimifriends() {
             </li>
           </ul>
         </article>
-        <article className="w-[90%] lg:h-[60vh] md:h-[40vh]">
+        <article className="w-[90%] lg:h-[60vh] md:h-[40vh] sm:h-[25vh]">
           <SectionTitle title="캐릭터 소개" />
           <div className="bg-mimi-friends-img bg-contain bg-no-repeat bg-center w-full h-full"></div>
         </article>

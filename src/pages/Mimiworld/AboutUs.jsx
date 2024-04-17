@@ -3,8 +3,10 @@ import SectionTitle from "../../components/atom/SectionTitle";
 function AboutUs() {
   return (
     <section className="flex flex-col gap-6 items-center">
-      <h2 className="font-mimi text-3xl">좋은 장난감 행복한 아이(I)</h2>
-      <article className="flex flex-col gap-3 w-[90%] items-center text-lg">
+      <h2 className="font-mimi text-3xl sm:text-xl">
+        좋은 장난감 행복한 아이(I)
+      </h2>
+      <article className="flex flex-col gap-3 w-[90%] items-center text-lg sm:text-base">
         <p>
           1973년 7월 작은 완구 소매점으로 시작한 저희 미미월드는 대표 브랜드
           미미인형의 발매히트로 51년 이상 우리나라 어린이들과 함께 꾸준한 성장을
@@ -23,16 +25,16 @@ function AboutUs() {
           귀 기울이는 모범적인 기업으로 나아갈 것을 약속 드립니다.
         </p>
       </article>
-      <article className="flex flex-col gap-5 items-start w-[90%] lg:h-[90vh] md:h-[30vh]">
+      <article className="flex flex-col gap-5 items-start w-[90%] lg:h-[90vh] md:h-[30vh] sm:h-[30vh]">
         <SectionTitle title="조직도" />
         <div className="w-full h-full">
           <p className="bg-emterprise bg-contain bg-no-repeat bg-center w-full h-full"></p>
         </div>
       </article>
-      <article className="flex flex-col gap-5 items-start w-[90%] lg:h-[90vh] md:h-[40vh]">
+      <article className="flex flex-col gap-5 items-start w-[90%] lg:h-[90vh] md:h-[40vh] sm:h-[30vh]">
         <SectionTitle title="기업가치" />
         <div className="w-full h-full">
-          <p className="bg-organization lg:bg-conver md:bg-contain bg-no-repeat bg-center w-full h-full"></p>
+          <p className="bg-organization lg:bg-conver md:bg-contain sm:bg-cover bg-no-repeat bg-center w-full h-full"></p>
         </div>
       </article>
     </section>

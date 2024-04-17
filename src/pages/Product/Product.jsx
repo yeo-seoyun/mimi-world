@@ -4,8 +4,8 @@ import SubNav from "../../components/molecule/SubNav";
 function Product() {
   return (
     <>
-      <section className="py-16 px-12 flex flex-col">
-        <h2 className="font-mimi text-4xl text-center py-5">미미 브랜드</h2>
+      <section className="py-16 px-12 flex flex-col sm:px-2">
+        <h2 className="font-mimi text-4xl text-center py-5">미미 상품</h2>
         <SubNav
           links={[
             {
@@ -17,7 +17,7 @@ function Product() {
             { label: "연령별", path: "/product/agefilter" },
           ]}
         />
-        <article className="pt-10">
+        <article className="pt-10 sm:pt-2">
           <Outlet />
         </article>
       </section>

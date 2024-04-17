@@ -16,7 +16,7 @@ function Youtube() {
 
   return (
     <div className="font-mimi flex flex-col gap-6 items-center">
-      <h2 className="text-2xl">🐰미미 스마트워치🐰</h2>
+      <h2 className="text-2xl sm:text-base">🐰미미 스마트워치🐰</h2>
       <div className="w-full max-w-screen-lg aspect-video">
         <YouTube
           videoId="zsyhLF42LRg"

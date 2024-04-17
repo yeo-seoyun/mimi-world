@@ -55,8 +55,8 @@ function AgeFilter() {
 
   return (
     <>
-      <section className="container mx-auto p-4 space-y-16">
-        <div className="flex justify-center gap-10 mb-6 font-mimi text-lg">
+      <section className="container mx-auto p-4 sm:p-0 space-y-16">
+        <div className="flex justify-center gap-10 mb-6 font-mimi text-lg sm:truncate sm:text-xs sm:flex-row sm:gap-2">
           <button
             className={`${isActive("all")}`}
             onClick={() => handleFilterChange("all")}

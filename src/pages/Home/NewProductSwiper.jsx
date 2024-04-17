@@ -29,8 +29,8 @@ function NewProductSwiper() {
   return (
     <div className="w-full h-full flex flex-col gap-8">
       <div className="flex flex-col gap-2 m-auto items-center">
-        <h2 className="font-mimi text-2xl">영원한 나의 친구!</h2>
-        <p>미미월드 프랜즈 만나보기</p>
+        <h2 className="font-mimi text-2xl sm:text-base">영원한 나의 친구!</h2>
+        <p className="sm:text-sm">미미월드 프랜즈 만나보기</p>
         <DetailButton to="/product">자세히 보기</DetailButton>
       </div>
       <Swiper
@@ -42,7 +42,7 @@ function NewProductSwiper() {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         breakpoints={{
-          1024: {
+          1079: {
             slidesPerView: 4,
           },
         }}

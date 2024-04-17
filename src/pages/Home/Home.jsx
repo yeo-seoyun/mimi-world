@@ -7,18 +7,18 @@ import Youtube from "./Youtube";
 
 function Home() {
   return (
-    <section className="w-full h-full py-16 flex flex-col lg:gap-24 md:gap-12">
+    <section className="w-full h-full py-16 flex flex-col sm:gap-6 md:gap-12 lg:gap-24 ">
       <article>
         <ImageSlider />
       </article>
-      <article className="w-[90%] h-full m-auto flex flex-col gap-24">
+      <article className="w-[90%] h-full m-auto flex flex-col sm:gap-6 md:gap-12 lg:gap-24">
         <NewProductSwiper />
         <AgeLine />
         <Youtube />
       </article>
-      <article className="w-[90%] m-auto flex flex-col gap-10">
+      <article className="w-[90%] m-auto flex flex-col gap-10 sm:hidden">
         <div className="flex flex-col gap-2 m-auto items-center">
-          <h2 className="font-mimi  text-2xl">미미월드의 다양한 SNS 이야기</h2>
+          <h2 className="font-mimi text-2xl">미미월드의 다양한 SNS 이야기</h2>
           <p>고객과 소통하는 미미월드</p>
         </div>
         <div className="w-full flex lg:gap-6 md:gap-2">

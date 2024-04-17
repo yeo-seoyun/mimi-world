@@ -17,7 +17,7 @@ const ImageSlider = () => {
   }, [count]);
 
   return (
-    <div className="relative font-mimi lg:h-[80vh] md:h-[30vh]">
+    <div className="relative font-mimi lg:h-[80vh] md:h-[30vh] sm:h-[20vh]">
       <ul>
         <li
           className={`absolute w-full h-full bg-main-bg1 bg-no-repeat bg-cover transition-opacity bg-slate-400 ${
@@ -25,7 +25,7 @@ const ImageSlider = () => {
           }`}
         >
           <div
-            className={`absolute z-10 flex flex-col gap-4 items-center top-1/3 left-[10%] transform transition-all duration-1000 ${
+            className={`absolute sm:hidden z-10 flex flex-col gap-4 items-center top-1/3 left-[10%] transform transition-all duration-1000 ${
               textsVisible === 0 ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -48,7 +48,7 @@ const ImageSlider = () => {
           }`}
         >
           <div
-            className={`absolute z-10 flex flex-col gap-4 items-center top-1/3 left-[10%] transform transition-all duration-1000 ${
+            className={`absolute sm:hidden z-10 flex flex-col gap-4 items-center top-1/3 left-[10%] transform transition-all duration-1000 ${
               textsVisible === 1 ? "opacity-100" : "opacity-0"
             }`}
           >

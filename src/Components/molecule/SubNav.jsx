@@ -18,7 +18,7 @@ function SubNav({ links }) {
             <button
               type="button"
               onClick={() => navigate(link.path, link.options)}
-              className={`${buttonClasses} px-3 py-1 rounded`}
+              className={`${buttonClasses} px-3 py-1 rounded sm:text-sm`}
             >
               {link.label}
             </button>

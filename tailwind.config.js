@@ -4,16 +4,11 @@ import textShadowPlugin from "tailwindcss-textshadow";
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    // screens: {
-    //   sm: "640px",
-    //   // => @media (min-width: 640px) { ... }
-
-    //   md: "1024px",
-    //   // => @media (min-width: 1024px) { ... }
-
-    //   lg: "1280px",
-    //   // => @media (min-width: 1280px) { ... }
-    // },
+    screens: {
+      sm: { min: "320px", max: "767px" },
+      md: { min: "768px", max: "1079px" },
+      lg: { min: "1080px" },
+    },
     extend: {
       colors: {
         black: {

@@ -4,8 +4,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import pb from "../../api/pocketbase";
 import ProductCard from "../../components/molecule/ProductCard";
-import MoreButton from "../../components/atom/MoreButton";
 import { Navigation } from "swiper/modules";
+import DetailButton from "../../components/atom/DetailButton";
 
 function NewProductSwiper() {
   const [product, setProduct] = useState([]);
@@ -31,7 +31,7 @@ function NewProductSwiper() {
       <div className="flex flex-col gap-2 m-auto items-center font-mimi">
         <h2 className="text-2xl">영원한 나의 친구!</h2>
         <p>미미월드 프랜즈 만나보기</p>
-        <MoreButton>자세히 보기</MoreButton>
+        <DetailButton>자세히 보기</DetailButton>
       </div>
       <Swiper
         className="w-full"

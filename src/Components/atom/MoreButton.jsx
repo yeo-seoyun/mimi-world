@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
-
-const MoreButton = ({ to, label, className, children }) => {
+// MoreButton.jsx
+function MoreButton({ onLoadMore }) {
   return (
-    <Link
-      to={to}
-      aria-label={label}
-      className={`bg-[#facfcf] rounded-full text-white py-1 px-2 transition duration-300 hover:bg-[#fca8a8] ${className}`}
-    >
-      {children}
-    </Link>
+    <div className="text-center mt-4">
+      <button
+        className="text-md bg-pink-100 text-white py-2 px-4 rounded hover:bg-pink-200"
+        onClick={onLoadMore}
+      >
+        더보기
+      </button>
+    </div>
   );
-};
+}
 
 export default MoreButton;

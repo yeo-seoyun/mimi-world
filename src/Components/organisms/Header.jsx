@@ -54,6 +54,7 @@ function Header() {
                   미미펫샵
                 </Link>
               </li>
+
               <li>
                 <Link to="/brand/ddolddol" aria-label="쫑알쫑알 똘똘이">
                   쫑알쫑알 똘똘이
@@ -64,13 +65,15 @@ function Header() {
 
           <div className="group inline-block h-full">
             <Link
-              to=""
+              to="/product"
               className="relative h-full flex items-center justify-center"
             >
               상품
             </Link>
             <ul className="absolute left-0 w-full py-4 px-12 hidden group-hover:block z-50 bg-white text-sm space-y-3">
-              <li>신상품</li>
+              <li>
+                <Link to="/product">신상품</Link>
+              </li>
               <li>브랜드별</li>
               <li>연령별</li>
             </ul>

@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import MoreButton from "../../components/atom/MoreButton";
+import MoreButton from "../../components/atom/DetailButton";
+import DetailButton from "../../components/atom/DetailButton";
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,9 +38,9 @@ const ImageSlider = () => {
               美美 아름다워라, 아름다워라
             </p>
 
-            <MoreButton to="/" label="미미 자세히보기">
+            <DetailButton to="/" label="미미 자세히보기">
               자세히 보기
-            </MoreButton>
+            </DetailButton>
           </div>
         </li>
 
@@ -60,9 +61,9 @@ const ImageSlider = () => {
               아이주도 역할놀이 완구 브랜드 <br />
               스스로 노는 즐거움이 <b>주체적인 힘</b>으로!
             </p>
-            <MoreButton to="/" label="미미 자세히보기">
+            <DetailButton to="/" label="미미 자세히보기">
               자세히 보기
-            </MoreButton>
+            </DetailButton>
           </div>
         </li>
       </ul>

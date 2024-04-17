@@ -9,6 +9,10 @@ import PrincessMimi from "../pages/Brand/PrincessMimi";
 import Mimifriends from "../pages/Brand/Mimifriends";
 import MimiPet from "../pages/Brand/MimiPet";
 import Ddolddol from "../pages/Brand/Ddolddol";
+import Product from "../pages/Product/Product";
+import BrandFilter from "../pages/Product/BrandFilter";
+import AgeFilter from "../pages/Product/AgeFilter";
+import NewProduct from "../pages/Product/NewProduct";
 
 const navigationItems = [
   {
@@ -36,6 +40,15 @@ const navigationItems = [
       { path: "mimifriends", element: <Mimifriends /> },
       { path: "mimipet", element: <MimiPet /> },
       { path: "ddolddol", element: <Ddolddol /> },
+    ],
+  },
+  {
+    path: "/product",
+    element: <Product />,
+    children: [
+      { index: true, element: <NewProduct /> },
+      { path: "brandfilter", element: <BrandFilter /> },
+      { path: "agefilter", element: <AgeFilter /> },
     ],
   },
 ];

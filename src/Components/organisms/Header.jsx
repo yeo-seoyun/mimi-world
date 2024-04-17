@@ -39,11 +39,26 @@ function Header() {
               브랜드
             </Link>
             <ul className="absolute left-0 w-full py-4 px-12 hidden group-hover:block z-50 bg-white text-sm space-y-3">
-              <li>프린세스 미미</li>
-              <li>미미프렌즈</li>
-              <li>미미펫샵</li>
-              <li>쫑알쫑알 똘똘이</li>
-              <li>글로벌완구</li>
+              <li>
+                <Link to="/brand" aria-label="프린세스 미미">
+                  프린세스 미미
+                </Link>
+              </li>
+              <li>
+                <Link to="/brand/mimifriends" aria-label="미미프렌즈">
+                  미미프렌즈
+                </Link>
+              </li>
+              <li>
+                <Link to="/brand/mimipet" aria-label="미미펫샵">
+                  미미펫샵
+                </Link>
+              </li>
+              <li>
+                <Link to="/brand/ddolddol" aria-label="쫑알쫑알 똘똘이">
+                  쫑알쫑알 똘똘이
+                </Link>
+              </li>
             </ul>
           </div>
 

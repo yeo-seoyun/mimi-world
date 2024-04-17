@@ -72,10 +72,20 @@ function Header() {
             </Link>
             <ul className="absolute left-0 w-full py-4 px-12 hidden group-hover:block z-50 bg-white text-sm space-y-3">
               <li>
-                <Link to="/product">신상품</Link>
+                <Link to="/product" aria-label="신상품">
+                  신상품
+                </Link>
               </li>
-              <li>브랜드별</li>
-              <li>연령별</li>
+              <li>
+                <Link to="/product/brandfilter" aria-label="브랜드별">
+                  브랜드별
+                </Link>
+              </li>
+              <li>
+                <Link to="/product/agefilter" aria-label="연령별">
+                  연령별
+                </Link>
+              </li>
             </ul>
           </div>
 

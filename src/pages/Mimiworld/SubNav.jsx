@@ -4,7 +4,7 @@ function SubNav() {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-pink-100 p-4 px-12 flex items-center justify-start gap-3">
+    <nav className="py-4 flex items-center justify-start gap-3">
       <button
         type="button"
         onClick={() => {
@@ -13,6 +13,7 @@ function SubNav() {
       >
         회사소개
       </button>
+      <span>|</span>
       <button
         type="button"
         onClick={() => {
@@ -21,6 +22,7 @@ function SubNav() {
       >
         CEO인사말
       </button>
+      <span>|</span>
       <button
         type="button"
         onClick={() => {

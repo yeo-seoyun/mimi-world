@@ -32,6 +32,13 @@ export default {
         "sns-naver": "url('src/assets/Home/sns1.png')",
         "sns-insta": "url('src/assets/Home/sns2.png')",
         "sns-youtube": "url('src/assets/Home/sns3.png')",
+        organization: "url('src/assets/Mimiworld/enterpriseValue.jpg')",
+        emterprise: "url('src/assets/Mimiworld/img_organization.jpg')",
+        "tit-icon": "url('src/assets/Mimiworld/tit_EnterpriseValue.png')",
+        "ceo-story": "url('src/assets/Mimiworld/img_ceoStory.jpg')",
+        "mimi-step": "url('src/assets/Mimiworld/img_step.png')",
+        "mimi-talent": "url('src/assets/Mimiworld/img_talent.png')",
+        "mimi-benefits": "url('src/assets/Mimiworld/benefits.png')",
       },
       boxShadow: {
         default: "0px 2px 15px -2px rgba(0, 0, 0, 0.09)",

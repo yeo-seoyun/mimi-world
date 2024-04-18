@@ -31,8 +31,8 @@ function NewProduct() {
 
   return (
     <>
-      <section className="container mx-auto p-4 sm:p-0 space-y-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-4">
+      <section className="container mx-auto p-2 sm:p-0 space-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-4">
           {visibleProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

@@ -23,8 +23,8 @@ function SnsLink() {
   ];
 
   return (
-    <div className="flex flex-col gap-6 items-cente w-full">
-      <div className="w-full flex items-center justify-center lg:gap-5 md:gap-2">
+    <div className="flex flex-col gap-6 justify-between">
+      <div className="bg-yellwo-100 flex lg:gap-5 md:gap-2">
         {links.map((link) => (
           <SnsLinkItem key={link.title} {...link} />
         ))}

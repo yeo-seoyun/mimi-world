@@ -21,7 +21,7 @@ function Home() {
           <h2 className="font-mimi text-2xl">미미월드의 다양한 SNS 이야기</h2>
           <p>고객과 소통하는 미미월드</p>
         </div>
-        <div className="w-full flex lg:gap-6 md:gap-2">
+        <div className="w-full flex justify-center lg:gap-6 md:gap-2">
           <SnsLink />
           <NoticeSimple />
         </div>

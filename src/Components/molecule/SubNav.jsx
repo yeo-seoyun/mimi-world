@@ -6,7 +6,7 @@ function SubNav({ links }) {
   const navigate = useNavigate();
   const location = useLocation();
   return (
-    <nav className="py-4 flex items-center justify-start gap-3">
+    <nav className="py-4 flex items-center justify-start sm:justify-center gap-3">
       {links.map((link, index) => {
         const isActive = location.pathname === link.path;
         const buttonClasses = isActive

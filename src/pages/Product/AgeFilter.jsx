@@ -55,7 +55,7 @@ function AgeFilter() {
 
   return (
     <>
-      <section className="container mx-auto p-4 sm:p-0 space-y-16">
+      <section className="container mx-auto p-2 sm:p-0 space-y-16">
         <div className="flex justify-center gap-10 mb-6 font-mimi text-lg sm:truncate sm:text-xs sm:flex-row sm:gap-2">
           <button
             className={`${isActive("all")}`}
@@ -82,7 +82,7 @@ function AgeFilter() {
             7세 이상
           </button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-4">
           {visibleProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

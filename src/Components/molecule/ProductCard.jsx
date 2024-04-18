@@ -2,7 +2,7 @@ import { getPbImage } from "../../utils/getPbImage";
 
 function ProductCard({ product }) {
   return (
-    <div className="flex flex-col gap-6 sm:gap-3 items-center border lg:py-6 md:py-4 sm:py-2">
+    <div className="flex flex-col gap-4 sm:gap-3 items-center border lg:py-6 md:py-4 sm:py-2">
       <img
         src={getPbImage(product.collectionId, product.id, product.photo)}
         alt={product.title}

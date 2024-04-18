@@ -12,6 +12,10 @@ import Product from "../pages/Product/Product";
 import BrandFilter from "../pages/Product/BrandFilter";
 import AgeFilter from "../pages/Product/AgeFilter";
 import NewProduct from "../pages/Product/NewProduct";
+import Inform from "../pages/Inform/Inform";
+import Faq from "../pages/Inform/Faq";
+import Notice from "../pages/Inform/Notice";
+import Event from "../pages/Inform/Event";
 
 const navigationItems = [
   {
@@ -48,6 +52,15 @@ const navigationItems = [
       { index: true, element: <NewProduct /> },
       { path: "brandfilter", element: <BrandFilter /> },
       { path: "agefilter", element: <AgeFilter /> },
+    ],
+  },
+  {
+    path: "/inform",
+    element: <Inform />,
+    children: [
+      { index: true, element: <Faq /> },
+      { path: "notice", element: <Notice /> },
+      { path: "event", element: <Event /> },
     ],
   },
 ];

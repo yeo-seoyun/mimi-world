@@ -115,7 +115,7 @@ function Header() {
 
           <div className="group inline-block h-full sm:hidden">
             <Link
-              to=""
+              to="/inform"
               className="relative h-full flex items-center justify-center"
             >
               공지사항
@@ -135,9 +135,13 @@ function Header() {
         ></Link>
 
         <ul className="w-full flex justify-end gap-1 text-sm sm:hidden">
-          <li>로그인</li>
+          <li>
+            <Link>로그인</Link>
+          </li>
           <li>/</li>
-          <li>회원가입</li>
+          <li>
+            <Link>회원가입</Link>
+          </li>
         </ul>
 
         <div className="w-full text-end hidden sm:block">
@@ -148,7 +152,7 @@ function Header() {
       </header>
 
       {showModal && (
-        <div className="fixed w-full h-screen z-50">
+        <div className="fixed w-full h-screen z-50 duration-300">
           <div className="absolute top-0 w-full h-full flex flex-col bg-white p-4  space-y-2">
             <div className="w-full flex justify-end">
               <button onClick={toggleModal} className="p-2 text-2xl">

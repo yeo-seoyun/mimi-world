@@ -4,15 +4,31 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 
 function Header() {
   const [showModal, setShowModal] = useState(false);
+  const modalRef = useRef();
 
   const toggleModal = () => {
-    setShowModal(!showModal);
+    if (showModal) {
+      gsap.to(modalRef.current, {
+        x: "-100%",
+        duration: 0.5,
+        onComplete: () => setShowModal(false),
+      });
+    } else {
+      setShowModal(true);
+    }
   };
+
+  useEffect(() => {
+    if (showModal) {
+      gsap.fromTo(modalRef.current, { x: "-100%" }, { x: 0, duration: 0.5 });
+    }
+  }, [showModal]);
 
   const handleLinkClick = (e) => {
     toggleModal();
@@ -152,7 +168,7 @@ function Header() {
       </header>
 
       {showModal && (
-        <div className="fixed w-full h-screen z-50 duration-300">
+        <div ref={modalRef} className="fixed w-full h-screen z-50">
           <div className="absolute top-0 w-full h-full flex flex-col bg-white p-4  space-y-2">
             <div className="w-full flex justify-end">
               <button onClick={toggleModal} className="p-2 text-2xl">

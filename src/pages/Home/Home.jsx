@@ -23,7 +23,7 @@ function Home() {
           </h2>
           <p className="sm:text-sm">고객과 소통하는 미미월드</p>
         </div>
-        <div className="w-full flex justify-center lg:gap-6 md:gap-2">
+        <div className="w-full flex justify-center lg:gap-6 md:gap-2 sm:gap-1">
           <SnsLink />
           <NoticeSimple />
         </div>

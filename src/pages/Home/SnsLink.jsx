@@ -27,7 +27,7 @@ function SnsLink() {
 
   return (
     <div className="flex flex-col gap-6 justify-between">
-      <div className="bg-yellwo-100 flex lg:gap-5 md:gap-2 sm:gap-3">
+      <div className="bg-yellwo-100 flex lg:gap-5 md:gap-2 sm:gap-1">
         {links.map((link) => (
           <SnsLinkItem key={link.title} {...link} />
         ))}

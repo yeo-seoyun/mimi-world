@@ -30,19 +30,19 @@ function NoticeSimple() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-6 xl:w-full lg:w-[17.5rem] md:w-[11.563rem] bg-slate-50 bg-opacity-40 rounded-md p-4 sm:hidden">
-      <div className="flex items-center justify-center gap-3">
-        <h2 className="font-mimi lg:text-2xl md:text-lg text-center">
+    <div className="flex flex-col gap-6 xl:w-full lg:w-[17.5rem] md:w-[11.563rem] sm:w-20 bg-slate-50 bg-opacity-40 rounded-md p-4 sm:p-1">
+      <div className="flex items-center justify-center gap-3 sm:flex-col sm:gap-1">
+        <h2 className="font-mimi lg:text-2xl md:text-lg sm:text-xs text-center">
           미미 공지사항
         </h2>
         <Link to="/inform/notice">
           <span>
-            <FontAwesomeIcon icon={faPlus} />
+            <FontAwesomeIcon icon={faPlus} className="sm:text-xs" />
           </span>
         </Link>
       </div>
       {notices.length > 0 ? (
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 sm:hidden">
           {notices.map((notice) => (
             <li
               key={notice.id}

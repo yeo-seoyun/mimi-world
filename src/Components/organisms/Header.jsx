@@ -67,13 +67,11 @@ function Header() {
         </div>
       </header>
 
-      {showModal && (
-        <CategoryModal
-          isOpen={showModal}
-          toggleModal={toggleModal}
-          handleLinkClick={handleLinkClick}
-        />
-      )}
+      <CategoryModal
+        isOpen={showModal}
+        toggleModal={toggleModal}
+        handleLinkClick={handleLinkClick}
+      />
 
       <SearchModal
         isOpen={showSearchModal}

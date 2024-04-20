@@ -23,7 +23,7 @@ function BrandFilter() {
         setAllProducts(response);
         filterProducts(response, "all", searchQuery);
       } catch (error) {
-        console.error("Failed to fetch products: ", error);
+        console.error("상품을 불러올 수 없습니다.🤯🤯: ", error);
       }
     };
     fetchProducts();
@@ -67,7 +67,7 @@ function BrandFilter() {
 
   return (
     <>
-      <section className="container mx-auto p-2 sm:p-0 space-y-16 sm:space-y-8">
+      <section className="w-[90%] mx-auto p-2 sm:p-0 space-y-16 sm:space-y-8">
         <div className="flex justify-center gap-10 mb-6 font-mimi text-lg sm:truncate sm:text-xs sm:flex-row sm:gap-2">
           {[
             "all",

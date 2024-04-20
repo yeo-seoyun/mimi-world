@@ -22,7 +22,7 @@ function AgeFilter() {
         });
         setAllProducts(response);
       } catch (error) {
-        console.error("상품을 가져오기 실패🤯", error);
+        console.error("상품을 불러올 수 없습니다.🤯🤯", error);
       }
     };
 
@@ -57,7 +57,7 @@ function AgeFilter() {
 
   return (
     <>
-      <section className="container mx-auto p-2 sm:p-0 space-y-16 sm:space-y-8">
+      <section className="w-[90%] mx-auto p-2 sm:p-0 space-y-16 sm:space-y-8">
         <div className="flex justify-center gap-10 mb-6 font-mimi text-lg sm:truncate sm:text-xs sm:flex-row sm:gap-2">
           <button
             className={isActive("all")}

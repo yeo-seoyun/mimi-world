@@ -5,12 +5,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 
 function Header() {
   const [showModal, setShowModal] = useState(false);
   const modalRef = useRef();
+
+  const [showSearchModal, setShowSearchModal] = useState(false);
+  const searchModalRef = useRef();
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const toggleModal = () => {
     if (showModal) {
@@ -32,6 +37,40 @@ function Header() {
 
   const handleLinkClick = (e) => {
     toggleModal();
+  };
+
+  const toggleSearchModal = () => {
+    if (showSearchModal) {
+      gsap.to(searchModalRef.current, {
+        x: "100%",
+        duration: 0.5,
+        onComplete: () => setShowSearchModal(false),
+      });
+    } else {
+      setShowSearchModal(true);
+    }
+  };
+
+  useEffect(() => {
+    if (showSearchModal) {
+      gsap.fromTo(
+        searchModalRef.current,
+        { x: "100%" },
+        { x: 0, duration: 0.5 }
+      );
+    }
+  }, [showSearchModal]);
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/search?query=${encodeURIComponent(searchTerm.trim())}`);
+      toggleSearchModal();
+    }
   };
 
   return (
@@ -180,8 +219,9 @@ function Header() {
           </li>
         </ul>
 
+        {/* 모바일 뷰에서만 보이기 */}
         <div className="w-full text-end hidden sm:block">
-          <button type="button" aria-label="검색">
+          <button type="button" onClick={toggleSearchModal} aria-label="검색">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
@@ -342,6 +382,32 @@ function Header() {
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* 검색 모달 */}
+      {showSearchModal && (
+        <div ref={searchModalRef} className="fixed inset-0 z-50 bg-white p-4">
+          <form onSubmit={handleSearchSubmit} className="flex items-center">
+            <button type="submit" className="p-2">
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </button>
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={handleSearchChange}
+              placeholder="검색어를 입력하세요"
+              className="w-full p-2 border"
+            />
+
+            <button
+              onClick={toggleSearchModal}
+              className="p-2"
+              aria-label="검색 닫기"
+            >
+              <FontAwesomeIcon icon={faXmark} className="text-xl" />
+            </button>
+          </form>
         </div>
       )}
     </>

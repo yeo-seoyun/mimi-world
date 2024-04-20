@@ -47,7 +47,7 @@ function Product() {
             onSubmit={handleSearchSubmit}
           />
         </div>
-        <article className="pt-10 sm:pt-5">
+        <article className="w-full pt-10 sm:pt-5">
           <Outlet context={{ searchQuery, setSearchQuery }} />
         </article>
       </section>

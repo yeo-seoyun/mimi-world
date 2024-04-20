@@ -10,47 +10,54 @@ function NewProduct() {
 
   const [products, setProducts] = useState([]);
   const [visibleProducts, setVisibleProducts] = useState([]);
-  const [loadMore, setLoadMore] = useState(false);
+  const [loadMore, setLoadMore] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await pb.collection("products_mimi").getFullList({
-          sort: "-created",
-        });
+        const response = await pb
+          .collection("products_mimi")
+          .getFullList({ sort: "-created" });
         setProducts(response);
-        const filteredProducts = searchQuery
-          ? response.filter((product) =>
-              product.title.toLowerCase().includes(searchQuery.toLowerCase())
-            )
-          : response.slice(0, 8);
-        setVisibleProducts(filteredProducts);
+        updateVisibleProducts(response, searchQuery);
       } catch (error) {
-        console.error("상품을 가져오기 실패🤯", error);
+        console.error("상품을 불러올 수 없습니다.🤯🤯: ", error);
       }
     };
     fetchProducts();
   }, [searchQuery]);
 
+  const updateVisibleProducts = (allProducts, query) => {
+    const filteredProducts = query
+      ? allProducts.filter((product) =>
+          product.title.toLowerCase().includes(query.toLowerCase())
+        )
+      : allProducts;
+    setVisibleProducts(filteredProducts.slice(0, 8));
+    setLoadMore(filteredProducts.length > 8);
+  };
+
   const handleLoadMore = () => {
-    const newVisibleProducts = loadMore
-      ? products
-      : visibleProducts.concat(
-          products.slice(visibleProducts.length, visibleProducts.length + 8)
-        );
+    const currentLength = visibleProducts.length;
+    const additionalProducts = products.filter(
+      (product) =>
+        searchQuery === "" ||
+        product.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    const newVisibleProducts = additionalProducts.slice(0, currentLength + 8);
     setVisibleProducts(newVisibleProducts);
-    setLoadMore(newVisibleProducts.length >= products.length);
+    setLoadMore(newVisibleProducts.length < additionalProducts.length);
   };
 
   return (
     <>
-      <section className="container mx-auto p-2 sm:p-0 space-y-16">
+      <section className="w-[90%] mx-auto p-2 sm:p-0 space-y-16 sm:space-y-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-4">
           {visibleProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-        {!loadMore && <MoreButton onLoadMore={handleLoadMore} />}
+        {loadMore && <MoreButton onLoadMore={handleLoadMore} />}
       </section>
     </>
   );

@@ -41,6 +41,7 @@ function Header() {
           <button
             type="button"
             onClick={toggleModal}
+            aria-label="카테고리 열기"
             className="hidden sm:block"
           >
             <FontAwesomeIcon icon={faBars} />
@@ -48,6 +49,7 @@ function Header() {
           <div className="group inline-block h-full sm:hidden">
             <Link
               to="/mimiworld"
+              aria-label="미미월드"
               className="relative h-full flex items-center justify-center"
             >
               미미월드
@@ -74,6 +76,7 @@ function Header() {
           <div className="group inline-block h-full sm:hidden">
             <Link
               to="/brand"
+              aria-label="브랜드"
               className="relative h-full flex items-center justify-center"
             >
               브랜드
@@ -94,7 +97,6 @@ function Header() {
                   미미펫샵
                 </Link>
               </li>
-
               <li>
                 <Link to="/brand/ddolddol" aria-label="쫑알쫑알 똘똘이">
                   쫑알쫑알 똘똘이
@@ -106,6 +108,7 @@ function Header() {
           <div className="group inline-block h-full sm:hidden">
             <Link
               to="/product"
+              aria-label="상품"
               className="relative h-full flex items-center justify-center"
             >
               상품
@@ -132,14 +135,27 @@ function Header() {
           <div className="group inline-block h-full sm:hidden">
             <Link
               to="/inform"
+              aria-label="공지사항"
               className="relative h-full flex items-center justify-center"
             >
               공지사항
             </Link>
             <ul className="absolute left-0 w-full py-4 px-12 hidden group-hover:block z-50 bg-white text-sm space-y-3">
-              <li>FAQ</li>
-              <li>공지사항</li>
-              <li>이벤트</li>
+              <li>
+                <Link to="/inform" aria-label="자주 묻는 질문">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link to="/inform/notice" aria-label="공지사항">
+                  공지사항
+                </Link>
+              </li>
+              <li>
+                <Link to="/inform/event" aria-label="이벤트">
+                  이벤트
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -152,16 +168,20 @@ function Header() {
 
         <ul className="w-full flex justify-end gap-1 text-sm sm:hidden">
           <li>
-            <Link>로그인</Link>
+            <Link to="" aria-label="로그인">
+              로그인
+            </Link>
           </li>
           <li>/</li>
           <li>
-            <Link>회원가입</Link>
+            <Link to="" aria-label="회원가입">
+              회원가입
+            </Link>
           </li>
         </ul>
 
         <div className="w-full text-end hidden sm:block">
-          <button type="button">
+          <button type="button" aria-label="검색">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
@@ -171,7 +191,11 @@ function Header() {
         <div ref={modalRef} className="fixed w-full h-screen z-50">
           <div className="absolute top-0 w-full h-full flex flex-col bg-white p-4  space-y-2">
             <div className="w-full flex justify-end">
-              <button onClick={toggleModal} className="p-2 text-2xl">
+              <button
+                onClick={toggleModal}
+                className="p-2 text-2xl"
+                aria-label="카테고리 닫기"
+              >
                 <FontAwesomeIcon icon={faXmark} />
               </button>
             </div>
@@ -180,17 +204,29 @@ function Header() {
                 <h2>미미월드</h2>
                 <ul className="text-base text-gray-100 pl-2">
                   <li>
-                    <Link to="/mimiworld" onClick={handleLinkClick}>
+                    <Link
+                      to="/mimiworld"
+                      aria-label="미미월드"
+                      onClick={handleLinkClick}
+                    >
                       미미월드
                     </Link>
                   </li>
                   <li>
-                    <Link to="/mimiworld/ceomessage" onClick={handleLinkClick}>
+                    <Link
+                      to="/mimiworld/ceomessage"
+                      aria-label="CEO인사말"
+                      onClick={handleLinkClick}
+                    >
                       CEO 인사말
                     </Link>
                   </li>
                   <li>
-                    <Link to="/mimiworld/careers" onClick={handleLinkClick}>
+                    <Link
+                      to="/mimiworld/careers"
+                      aria-label="인재채용"
+                      onClick={handleLinkClick}
+                    >
                       인재채용
                     </Link>
                   </li>
@@ -198,22 +234,38 @@ function Header() {
                 <h2>브랜드</h2>
                 <ul className="text-base text-gray-100 pl-2">
                   <li>
-                    <Link to="/brand" onClick={handleLinkClick}>
+                    <Link
+                      to="/brand"
+                      aria-label="프린세스 미미"
+                      onClick={handleLinkClick}
+                    >
                       프린세스 미미
                     </Link>
                   </li>
                   <li>
-                    <Link to="/brand/mimifriends" onClick={handleLinkClick}>
+                    <Link
+                      to="/brand/mimifriends"
+                      aria-label="미미프렌즈"
+                      onClick={handleLinkClick}
+                    >
                       미미프렌즈
                     </Link>
                   </li>
                   <li>
-                    <Link to="/brand/mimipet" onClick={handleLinkClick}>
+                    <Link
+                      to="/brand/mimipet"
+                      aria-label="미미펫샵"
+                      onClick={handleLinkClick}
+                    >
                       미미펫샵
                     </Link>
                   </li>
                   <li>
-                    <Link to="/brand/ddolddol" onClick={handleLinkClick}>
+                    <Link
+                      to="/brand/ddolddol"
+                      aria-label="쫑알쫑알 똘똘이"
+                      onClick={handleLinkClick}
+                    >
                       쫑알쫑알 똘똘이
                     </Link>
                   </li>
@@ -221,17 +273,29 @@ function Header() {
                 <h2>상품</h2>
                 <ul className="text-base text-gray-100 pl-2">
                   <li>
-                    <Link to="/product" onClick={handleLinkClick}>
+                    <Link
+                      to="/product"
+                      aria-label="신상품"
+                      onClick={handleLinkClick}
+                    >
                       신상품
                     </Link>
                   </li>
                   <li>
-                    <Link to="/brand/mimifriends" onClick={handleLinkClick}>
+                    <Link
+                      to="/product/brandfilter"
+                      aria-label="브랜드별"
+                      onClick={handleLinkClick}
+                    >
                       브랜드별
                     </Link>
                   </li>
                   <li>
-                    <Link to="/brand/mimipet" onClick={handleLinkClick}>
+                    <Link
+                      to="/product/agefilter"
+                      aria-label="연령별"
+                      onClick={handleLinkClick}
+                    >
                       연령별
                     </Link>
                   </li>
@@ -239,26 +303,42 @@ function Header() {
                 <h2>공지사항</h2>
                 <ul className="text-base text-gray-100 pl-2">
                   <li>
-                    <Link to="/product" onClick={handleLinkClick}>
+                    <Link
+                      to="/inform"
+                      aria-label="자주 묻는 질문"
+                      onClick={handleLinkClick}
+                    >
                       FAQ
                     </Link>
                   </li>
                   <li>
-                    <Link to="/brand/mimifriends" onClick={handleLinkClick}>
+                    <Link
+                      to="/inform/notice"
+                      aria-label="공지사항"
+                      onClick={handleLinkClick}
+                    >
                       공지사항
                     </Link>
                   </li>
                   <li>
-                    <Link to="/brand/mimipet" onClick={handleLinkClick}>
+                    <Link
+                      to="/inform/event"
+                      aria-label="이벤트"
+                      onClick={handleLinkClick}
+                    >
                       이벤트
                     </Link>
                   </li>
                 </ul>
               </div>
               <div className="flex gap-1 text-sm">
-                <Link>로그인</Link>
+                <Link to="" aria-label="로그인">
+                  로그인
+                </Link>
                 <span>/</span>
-                <Link>회원가입</Link>
+                <Link to="" aria-label="회원가입">
+                  회원가입
+                </Link>
               </div>
             </div>
           </div>

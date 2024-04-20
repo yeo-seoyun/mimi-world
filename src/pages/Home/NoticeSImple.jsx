@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import pb from "../../api/pocketbase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 function NoticeSimple() {
   const [notices, setNotices] = useState([]);
+
+  const navigate = useNavigate();
+
+  const handleNoticeClick = (id) => {
+    navigate(`/inform/notice?open=${id}`);
+  };
 
   useEffect(() => {
     const fetchNotices = async () => {
@@ -23,21 +30,26 @@ function NoticeSimple() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-6 xl:w-full lg:w-[17.5rem] md:w-[11.563rem] bg-slate-50 bg-opacity-40 rounded-md p-4">
+    <div className="flex flex-col gap-6 xl:w-full lg:w-[17.5rem] md:w-[11.563rem] bg-slate-50 bg-opacity-40 rounded-md p-4 sm:hidden">
       <div className="flex items-center justify-center gap-3">
         <h2 className="font-mimi lg:text-2xl md:text-lg text-center">
           미미 공지사항
         </h2>
-        <Link to="/notice">
+        <Link to="/inform/notice">
           <span>
             <FontAwesomeIcon icon={faPlus} />
           </span>
         </Link>
       </div>
       {notices.length > 0 ? (
-        <ul>
+        <ul className="flex flex-col gap-2">
           {notices.map((notice) => (
-            <li key={notice.id} className="lg:text-lg md:text-sm truncate">
+            <li
+              key={notice.id}
+              className="lg:text-lg md:text-sm truncate cursor-pointer hover:font-bold transition-all duration-300"
+              onClick={() => handleNoticeClick(notice.id)}
+            >
+              <FontAwesomeIcon icon={faAngleRight} className="text-sm" />{" "}
               {notice.title}
             </li>
           ))}

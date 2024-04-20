@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer className="bg-gray-300 w-full px-12 sm:px-4 py-2 sm:text-xs lg:text-sm  text-gray-100">
+      <footer className="w-full px-12 sm:px-4 py-2 sm:text-xs lg:text-sm text-gray-100 bg-gray-300">
         <div className="flex flex-col gap-3">
           <article className="flex justify-between sm:flex-col sm:items-start md:flex-col md:items-start lg:flex-row lg:items-center">
             <div className="flex flex-col sm:flex-col md:flex-col sm:gap-3">

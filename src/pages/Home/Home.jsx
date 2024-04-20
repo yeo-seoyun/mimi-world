@@ -16,10 +16,12 @@ function Home() {
         <AgeLine />
         <Youtube />
       </article>
-      <article className="w-[90%] m-auto flex flex-col gap-10 sm:hidden">
+      <article className="w-[90%] m-auto flex flex-col gap-10">
         <div className="flex flex-col gap-2 m-auto items-center">
-          <h2 className="font-mimi text-2xl">미미월드의 다양한 SNS 이야기</h2>
-          <p>고객과 소통하는 미미월드</p>
+          <h2 className="font-mimi text-2xl sm:text-base">
+            미미월드의 다양한 SNS 이야기
+          </h2>
+          <p className="sm:text-sm">고객과 소통하는 미미월드</p>
         </div>
         <div className="w-full flex justify-center lg:gap-6 md:gap-2">
           <SnsLink />

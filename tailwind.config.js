@@ -60,6 +60,7 @@ export default {
         "mimi-ddol": "url('/assets/Brand/itembanner2.webp')",
         "mimi-ddol-logo": "url('/assets/Brand/mimiblogo4.webp')",
         "mimi-ddol-img": "url('/assets/Brand/mimiimg3.png')",
+        "event-img": "url('/assets/event-img.png')",
       },
       boxShadow: {
         default: "0px 2px 15px -2px rgba(0, 0, 0, 0.09)",

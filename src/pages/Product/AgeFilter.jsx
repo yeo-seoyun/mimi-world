@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 import ProductCard from "../../components/molecule/ProductCard";
 import pb from "../../api/pocketbase";
 import MoreButton from "../../components/atom/MoreButton";
+import { useSearchParams } from "react-router-dom";
 
 function AgeFilter() {
+  const [searchParams] = useSearchParams();
+  const searchQuery = searchParams.get("search") || "";
+
   const [allProducts, setAllProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentFilter, setCurrentFilter] = useState("all");
@@ -17,8 +21,6 @@ function AgeFilter() {
           sort: "-created",
         });
         setAllProducts(response);
-        setFilteredProducts(response);
-        setVisibleProducts(response.slice(0, 8));
       } catch (error) {
         console.error("상품을 가져오기 실패🤯", error);
       }
@@ -27,56 +29,56 @@ function AgeFilter() {
     fetchProducts();
   }, []);
 
-  const handleLoadMore = () => {
-    setVisibleProducts(
-      currentFilter === "all"
-        ? allProducts
-        : allProducts.filter((product) => product.age === currentFilter)
+  useEffect(() => {
+    const newFilteredProducts = allProducts.filter(
+      (product) =>
+        (currentFilter === "all" || product.age === currentFilter) &&
+        (searchQuery === "" ||
+          product.title.toLowerCase().includes(searchQuery.toLowerCase()))
     );
-    setVisibleProducts(filteredProducts);
-    setLoadMore(true);
+
+    setFilteredProducts(newFilteredProducts);
+    setVisibleProducts(newFilteredProducts.slice(0, 8));
+    setLoadMore(newFilteredProducts.length > 8);
+  }, [searchQuery, currentFilter, allProducts]);
+
+  const handleLoadMore = () => {
+    const nextVisibleCount = visibleProducts.length + 8;
+    setVisibleProducts(filteredProducts.slice(0, nextVisibleCount));
+    setLoadMore(nextVisibleCount < filteredProducts.length);
   };
 
   const handleFilterChange = (filter) => {
     setCurrentFilter(filter);
-    const newFilteredProducts =
-      filter === "all"
-        ? allProducts
-        : allProducts.filter((product) => product.age === filter);
-
-    setFilteredProducts(newFilteredProducts);
-    setVisibleProducts(newFilteredProducts.slice(0, 8));
-    setLoadMore(false);
   };
 
-  const isActive = (filter) => {
-    return currentFilter === filter ? "text-pink-200" : "text-black";
-  };
+  const isActive = (filter) =>
+    currentFilter === filter ? "text-pink-200" : "text-black";
 
   return (
     <>
-      <section className="container mx-auto p-2 sm:p-0 space-y-16">
+      <section className="container mx-auto p-2 sm:p-0 space-y-16 sm:space-y-8">
         <div className="flex justify-center gap-10 mb-6 font-mimi text-lg sm:truncate sm:text-xs sm:flex-row sm:gap-2">
           <button
-            className={`${isActive("all")}`}
+            className={isActive("all")}
             onClick={() => handleFilterChange("all")}
           >
             전체
           </button>
           <button
-            className={`${isActive("3")}`}
+            className={isActive("3")}
             onClick={() => handleFilterChange("3")}
           >
             3세 이상
           </button>
           <button
-            className={`${isActive("5")}`}
+            className={isActive("5")}
             onClick={() => handleFilterChange("5")}
           >
             5세 이상
           </button>
           <button
-            className={`${isActive("7")}`}
+            className={isActive("7")}
             onClick={() => handleFilterChange("7")}
           >
             7세 이상
@@ -87,12 +89,11 @@ function AgeFilter() {
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-        {!loadMore && filteredProducts.length > 8 && (
-          <MoreButton onLoadMore={handleLoadMore} />
-        )}
+        {loadMore && <MoreButton onLoadMore={handleLoadMore} />}
       </section>
     </>
   );
 }
 
 export default AgeFilter;
+``;

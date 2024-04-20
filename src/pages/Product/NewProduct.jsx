@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 import ProductCard from "../../components/molecule/ProductCard";
 import pb from "../../api/pocketbase";
 import MoreButton from "../../components/atom/MoreButton";
+import { useSearchParams } from "react-router-dom";
 
 function NewProduct() {
+  const [searchParams] = useSearchParams();
+  const searchQuery = searchParams.get("search") || "";
+
   const [products, setProducts] = useState([]);
   const [visibleProducts, setVisibleProducts] = useState([]);
   const [loadMore, setLoadMore] = useState(false);
@@ -15,18 +19,27 @@ function NewProduct() {
           sort: "-created",
         });
         setProducts(response);
-        setVisibleProducts(response.slice(0, 8));
+        const filteredProducts = searchQuery
+          ? response.filter((product) =>
+              product.title.toLowerCase().includes(searchQuery.toLowerCase())
+            )
+          : response.slice(0, 8);
+        setVisibleProducts(filteredProducts);
       } catch (error) {
         console.error("상품을 가져오기 실패🤯", error);
       }
     };
-
     fetchProducts();
-  }, []);
+  }, [searchQuery]);
 
   const handleLoadMore = () => {
-    setVisibleProducts(products);
-    setLoadMore(true);
+    const newVisibleProducts = loadMore
+      ? products
+      : visibleProducts.concat(
+          products.slice(visibleProducts.length, visibleProducts.length + 8)
+        );
+    setVisibleProducts(newVisibleProducts);
+    setLoadMore(newVisibleProducts.length >= products.length);
   };
 
   return (

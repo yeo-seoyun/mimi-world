@@ -17,6 +17,7 @@ import Faq from "../pages/Inform/Faq";
 import Notice from "../pages/Inform/Notice";
 import Event from "../pages/Inform/Event";
 import SearchPage from "../components/organisms/SearchPage";
+import ProductDetail from "../pages/Product/ProductDetail";
 
 const navigationItems = [
   {
@@ -57,6 +58,7 @@ const navigationItems = [
       { index: true, element: <NewProduct /> },
       { path: "brandfilter", element: <BrandFilter /> },
       { path: "agefilter", element: <AgeFilter /> },
+      { path: ":productId", element: <ProductDetail /> },
     ],
   },
   {

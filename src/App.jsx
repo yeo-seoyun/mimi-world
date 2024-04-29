@@ -16,7 +16,6 @@ function App() {
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-        {/* <ReactQueryDevtools initialIsOpen={true} /> */}
         <div className="flex flex-col"></div>
         <RouterProvider router={router} />
       </QueryClientProvider>

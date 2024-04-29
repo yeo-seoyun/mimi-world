@@ -4,6 +4,7 @@ function SnsLink() {
   const links = [
     {
       to: "https://cafe.naver.com/mimiworldfriends",
+      target: "_blank",
       linkClass: "bg-sns-naver",
       title: "네이버 공식카페로 놀러와!",
       description:

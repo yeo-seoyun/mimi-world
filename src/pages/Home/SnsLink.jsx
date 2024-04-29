@@ -12,6 +12,7 @@ function SnsLink() {
     },
     {
       to: "https://www.instagram.com/mimiworld_official/",
+      target: "_blank",
       linkClass: "bg-sns-insta",
       title: "오늘의 인스타그램 이벤트!",
       description:
@@ -19,6 +20,7 @@ function SnsLink() {
     },
     {
       to: "https://www.youtube.com/@mimiworld1004",
+      target: "_blank",
       linkClass: "bg-sns-youtube",
       title: "장난감 이야기가 궁금해?",
       description:

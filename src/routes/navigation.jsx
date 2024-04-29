@@ -16,7 +16,7 @@ import Inform from "../pages/Inform/Inform";
 import Faq from "../pages/Inform/Faq";
 import Notice from "../pages/Inform/Notice";
 import Event from "../pages/Inform/Event";
-import SearchPage from "../components/organisms/SearchPage";
+// import SearchPage from "../components/organisms/SearchPage";
 import ProductDetail from "../pages/Product/ProductDetail";
 
 const navigationItems = [
@@ -28,10 +28,10 @@ const navigationItems = [
     element: <Home />,
     lazy: () => import("@/pages/Home/Home"),
   },
-  {
-    path: "/search",
-    element: <SearchPage />,
-  },
+  // {
+  //   path: "/search",
+  //   element: <SearchPage />,
+  // },
   {
     path: "/mimiworld",
     element: <Mimiworld />,

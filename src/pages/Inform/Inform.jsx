@@ -1,9 +1,14 @@
 import { Outlet } from "react-router-dom";
 import SubNav from "../../components/molecule/SubNav";
+import { Helmet } from "react-helmet";
 
 function Inform() {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>미미월드 | 공지사항</title>
+      </Helmet>
       <section className="py-16 px-12 sm:px-2 flex flex-col">
         <SubNav
           links={[

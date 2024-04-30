@@ -1,9 +1,14 @@
 import { Outlet } from "react-router-dom";
 import SubNav from "../../components/molecule/SubNav";
+import { Helmet } from "react-helmet";
 
 function Mimiworld() {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>미미월드 | 소개</title>
+      </Helmet>
       <section className="py-16 px-12 sm:px-2 flex flex-col">
         <h2 className="font-mimi text-4xl text-center py-5">MIMI WORLD</h2>
         <SubNav

@@ -2,6 +2,7 @@ import { Outlet, useSearchParams } from "react-router-dom";
 import SubNav from "../../components/molecule/SubNav";
 import SearchInput from "../../components/atom/SearchInput";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 function Product() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -27,6 +28,10 @@ function Product() {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>미미월드 | 상품</title>
+      </Helmet>
       <section className="py-16 px-12 flex flex-col sm:px-2">
         <h2 className="font-mimi text-4xl text-center py-5">미미 상품</h2>
         <div className="flex items-center justify-between sm:flex-col">
